@@ -33,15 +33,15 @@ The following files are available for the train and test data. Their description
 * 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second.
 
 ###This is a description of exactly what process the script performs to the change the data to achieve the desired result:
-##1. Read the test and train data into R and save them as R objects
-##2. Bind the test and train data together into one large, messy, all-inclusive data frame
-##3. Extract the feature measurement names from the /UCI HAR Dataset/features.txt file
-##4. Append the names "Subject" and "Activity" to names extracted from the file in step 3, use this object to name the columns of the data frame created in step 2
-##5. Subset the large, messy dataframe to remove only the columns containing the mean or standard deviation of measurements (as well as the Subject and Activity data), saving this information in a new data frame
-##6. Create a character vector containing the names of the activities performed, with indices matching their order, given by the /UCI HAR Dataset/activity_labels.txt file
-##7. Use this vector and a for loop to insert those names to replace the numbers in the Activity column of the most recently created data frame
-##8. Load the reshape2 package and melt the most recently created data frame, then use dcast to arrange the means of the measurement variables with relation to each subject's performance on each activity
-##9. Create a text file in the working directory called "TidyData.txt" and write the tidied data to that file
+1. Read the test and train data into R and save them as R objects
+2. Bind the test and train data together into one large, messy, all-inclusive data frame
+3. Extract the feature measurement names from the /UCI HAR Dataset/features.txt file
+4. Append the names "Subject" and "Activity" to names extracted from the file in step 3, use this object to name the columns of the data frame created in step 2
+5. Subset the large, messy dataframe to remove only the columns containing the mean or standard deviation of measurements (as well as the Subject and Activity data), saving this information in a new data frame
+6. Create a character vector containing the names of the activities performed, with indices matching their order, given by the /UCI HAR Dataset/activity_labels.txt file
+7. Use this vector and a for loop to insert those names to replace the numbers in the Activity column of the most recently created data frame
+8. Load the reshape2 package and melt the most recently created data frame, then use dcast to arrange the means of the measurement variables with relation to each subject's performance on each activity
+9. Create a text file in the working directory called "TidyData.txt" and write the tidied data to that file
 
   
   
